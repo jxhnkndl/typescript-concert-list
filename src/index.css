@@ -1,3 +1,5 @@
+@import './vars.css';
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap');
 
 * {
@@ -6,4 +8,9 @@
   box-sizing: border-box;
   font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+}
+
+body {
+  background-color: var(--base-700);
+  color: var(--base-100);
 }
