@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import { v4 as uuidv4 } from 'uuid';
 
 import cannons from './assets/cannons.png';
 import marsVolta from './assets/mars-volta.png';
@@ -9,7 +10,8 @@ import sylvanEsso from './assets/sylvan-esso.png';
 import teganAndSara from './assets/tegan-and-sara.png';
 import wonderYears from './assets/the-wonder-years.png';
 
-export interface Concert {
+export interface ConcertData {
+  id: string;
   date: string;
   venue: string;
   city: string;
@@ -23,6 +25,7 @@ export interface Concert {
 
 export const concerts = [
   {
+    id: uuidv4(),
     date: dayjs('09/13/2023').format('ddd MMM M, YYYY'),
     venue: 'The National',
     city: 'Richmond',
@@ -31,9 +34,10 @@ export const concerts = [
     support: 'Anxious, Sweet Pill, Action/Adventure',
     time: '6:45 PM',
     price: 30.0,
-    image: wonderYears
+    image: wonderYears,
   },
   {
+    id: uuidv4(),
     date: dayjs('09/14/2023').format('ddd MMM M, YYYY'),
     venue: 'The National',
     city: 'Richmond',
@@ -42,9 +46,10 @@ export const concerts = [
     support: 'Two Another, Jane Leo',
     time: '7:30 PM',
     price: 18.0,
-    image: cannons
+    image: cannons,
   },
   {
+    id: uuidv4(),
     date: dayjs('09/16/2023').format('ddd MMM M, YYYY'),
     venue: "Brown's Island",
     city: 'Richmond',
@@ -52,9 +57,10 @@ export const concerts = [
     headliner: 'Mt. Joy',
     time: '7:00 PM',
     price: 45.0,
-    image: mtJoy
+    image: mtJoy,
   },
   {
+    id: uuidv4(),
     date: dayjs('09/19/2023').format('ddd MMM M, YYYY'),
     venue: 'The National',
     city: 'Richmond',
@@ -63,9 +69,10 @@ export const concerts = [
     support: 'Teri Gender Bender',
     time: '9:00 PM',
     price: 30.0,
-    image: marsVolta
+    image: marsVolta,
   },
   {
+    id: uuidv4(),
     date: dayjs('09/20/2023').format('ddd MMM M, YYYY'),
     venue: 'The National',
     city: 'Richmond',
@@ -74,9 +81,10 @@ export const concerts = [
     support: 'Anna Bates',
     time: '7:30 PM',
     price: 25.0,
-    image: noahCyrus
+    image: noahCyrus,
   },
   {
+    id: uuidv4(),
     date: dayjs('09/24/2023').format('ddd MMM M, YYYY'),
     venue: "Pridefest @ Brown's Island",
     city: 'Richmond',
@@ -85,9 +93,10 @@ export const concerts = [
     support: 'Carlie Hanson',
     time: '7:00 PM',
     price: 40.0,
-    image: teganAndSara
+    image: teganAndSara,
   },
   {
+    id: uuidv4(),
     date: dayjs('09/27/2023').format('ddd MMM M, YYYY'),
     venue: 'The National',
     city: 'Richmond',
@@ -96,9 +105,10 @@ export const concerts = [
     support: 'GRRL',
     time: '7:00 PM',
     price: 30.0,
-    image: sylvanEsso
+    image: sylvanEsso,
   },
   {
+    id: uuidv4(),
     date: dayjs('09/29/2023').format('ddd MMM M, YYYY'),
     venue: 'The National',
     city: 'Richmond',
@@ -107,6 +117,6 @@ export const concerts = [
     support: 'Alana Springsteen',
     time: '8:00 PM',
     price: 25.0,
-    image: switchfoot
+    image: switchfoot,
   },
 ];
