@@ -9,7 +9,7 @@ import sylvanEsso from './assets/sylvan-esso.png';
 import teganAndSara from './assets/tegan-and-sara.png';
 import wonderYears from './assets/the-wonder-years.png';
 
-interface TourDate {
+export interface Concert {
   date: string;
   venue: string;
   city: string;
@@ -21,7 +21,7 @@ interface TourDate {
   image?: string;
 }
 
-export const dates: TourDate[] = [
+export const concerts = [
   {
     date: dayjs('09/13/2023').format('ddd MMM M, YYYY'),
     venue: 'The National',
