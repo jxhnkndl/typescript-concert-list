@@ -3,7 +3,7 @@ import styles from './Header.module.css';
 function Header() {
   return (
     <header className={styles.header}>
-      <h2>HEADER</h2>
+      <h1 className={styles.h1}>RVA Noise</h1>
     </header>
   )
 }
