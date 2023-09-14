@@ -1,0 +1,121 @@
+@import '../../vars.css';
+
+.concert {
+  background-color: var(--base-900);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  /* min-height: 8rem; */
+  color: var(--base-100);
+}
+
+.image-col {
+  grid-column: 1 / 5;
+  margin-bottom: 1.25rem;
+}
+
+.main-col {
+  grid-column: 1 / 5;
+}
+
+.image {
+  min-height: 9rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.details-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.details {
+  flex-basis: 100%;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.buttons {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--secondary)
+}
+
+.headliner {
+  font-size: 1.25rem;
+  margin: 0.5rem 0 0.25rem 0;
+}
+
+.support {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.venue {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.button {
+  background-color: var(--primary);
+  border-radius: 0.25rem;
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.button:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .image-col {
+    grid-column: 1 / 2;
+    margin: 0 1rem 0 0;
+  }
+  
+  .main-col {
+    grid-column: 2 / 5;
+  }
+
+  .details {
+    flex-basis: 75%;
+    text-align: left;
+  }
+
+  .buttons {
+    flex-basis: 25%;
+    justify-content: start;
+  }
+
+  .headliner {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .support {
+    font-size: 1rem;
+  }
+}
