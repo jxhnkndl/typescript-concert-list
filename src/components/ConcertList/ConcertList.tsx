@@ -1,4 +1,3 @@
-import styles from './ConcertList.module.css';
 import { ConcertData } from '../../data';
 
 import Concert from '../Concert/Concert';
@@ -8,7 +7,7 @@ interface ConcertListProps {
   concerts: ConcertData[];
 }
 
-function ConcertList({ concerts }: ConcertListProps) {
+const ConcertList = ({ concerts }: ConcertListProps) => {
   return (
     <div>
       {concerts.map((concert) => (

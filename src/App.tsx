@@ -5,7 +5,7 @@ import Footer from './layout/Footer/Footer';
 import ConcertList from './components/ConcertList/ConcertList';
 import Header from './layout/Header/Header';
 
-function App() {
+const App = () => {
   return (
     <div className={styles.wrapper}>
       <Header />

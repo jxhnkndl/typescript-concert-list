@@ -6,7 +6,7 @@ interface ConcertProps {
   concert: ConcertData;
 }
 
-function Concert({ concert }: ConcertProps) {
+const Concert = ({ concert }: ConcertProps) => {
   return (
     <article className={styles.concert}>
       <div className={`${styles['image-col']} ${styles.column}`}>
