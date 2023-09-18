@@ -3,11 +3,48 @@
 .header {
   margin-bottom: 1rem;
   border-bottom: var(--primary) solid 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .h1 {
-  font-size: 3rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
   color: var(--primary);
   margin-bottom: .5rem;
+  text-decoration: none;
+}
+
+.h1:visited {
+  text-decoration: none;
+}
+
+.link {
+  color: var(--base-100);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.25rem;
+  margin-left: .25rem;
+  color: var(--primary);
+  display: inline;
+}
+
+.icon:hover,
+.icon:active {
+  color: var(--secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .h1 {
+    font-size: 3rem;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
 }
