@@ -19,7 +19,7 @@ export interface ConcertData {
   headliner: string;
   support?: string | undefined;
   time: string;
-  price: number;
+  price: string;
   image?: string;
 }
 
@@ -33,7 +33,7 @@ export const concertData = [
     headliner: 'The Wonder Years',
     support: 'Anxious, Sweet Pill, Action/Adventure',
     time: '6:45 PM',
-    price: 30.0,
+    price: '30',
     image: wonderYears,
   },
   {
@@ -45,7 +45,7 @@ export const concertData = [
     headliner: 'Cannons',
     support: 'Two Another, Jane Leo',
     time: '7:30 PM',
-    price: 18.0,
+    price: '18',
     image: cannons,
   },
   {
@@ -56,7 +56,7 @@ export const concertData = [
     state: 'VA',
     headliner: 'Mt. Joy',
     time: '7:00 PM',
-    price: 45.0,
+    price: '45',
     image: mtJoy,
   },
   {
@@ -68,7 +68,7 @@ export const concertData = [
     headliner: 'The Mars Volta',
     support: 'Teri Gender Bender',
     time: '9:00 PM',
-    price: 30.0,
+    price: '40',
     image: marsVolta,
   },
   {
@@ -80,7 +80,7 @@ export const concertData = [
     headliner: 'Noah Cyrus',
     support: 'Anna Bates',
     time: '7:30 PM',
-    price: 25.0,
+    price: '25',
     image: noahCyrus,
   },
   {
@@ -92,7 +92,7 @@ export const concertData = [
     headliner: 'Tegan & Sara',
     support: 'Carlie Hanson',
     time: '7:00 PM',
-    price: 40.0,
+    price: '40',
     image: teganAndSara,
   },
   {
@@ -104,7 +104,7 @@ export const concertData = [
     headliner: 'Sylvan Esso',
     support: 'GRRL',
     time: '7:00 PM',
-    price: 30.0,
+    price: '30',
     image: sylvanEsso,
   },
   {
@@ -116,7 +116,7 @@ export const concertData = [
     headliner: 'Switchfoot',
     support: 'Alana Springsteen',
     time: '8:00 PM',
-    price: 25.0,
+    price: '25',
     image: switchfoot,
   },
 ];
