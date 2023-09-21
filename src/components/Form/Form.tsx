@@ -2,10 +2,13 @@ import { useState } from 'react';
 import styles from './Form.module.css';
 
 interface Props {
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleSubmit: (
+    e: React.FormEvent<HTMLFormElement>,
+    formData: FormData
+  ) => void;
 }
 
-interface FormData {
+export interface FormData {
   date: string;
   venue: string;
   city: string;
@@ -36,16 +39,22 @@ const Form = ({ handleSubmit }: Props) => {
 
     setFormData({
       ...formData,
-      [name]: value
-    })
+      [name]: value,
+    });
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={(e) => handleSubmit(e, formData)}>
       <h2 className={styles.h2}>Add Concert</h2>
       {/* Date */}
       <div className={styles['form-group']}>
-        <input className={styles.input} type="date" name="date" onChange={handleChange} value={formData.date}/>
+        <input
+          className={styles.input}
+          type="date"
+          name="date"
+          onChange={handleChange}
+          value={formData.date}
+        />
       </div>
       {/* Venue */}
       <div className={styles['form-group']}>
@@ -130,7 +139,7 @@ const Form = ({ handleSubmit }: Props) => {
           className={styles.input}
           placeholder="Image URL"
           type="text"
-          name="image"
+          name="imageURL"
           value={formData.imageURL}
           onChange={handleChange}
         />

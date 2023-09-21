@@ -1,10 +1,15 @@
 import Form from '../../components/Form/Form';
 import styles from './Header.module.css';
 
+import { FormData } from '../../components/Form/Form';
+
 interface Props {
   isOpen: boolean;
   toggleForm: () => void;
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleSubmit: (
+    e: React.FormEvent<HTMLFormElement>,
+    formData: FormData
+  ) => void;
 }
 
 const Header = ({ isOpen, toggleForm, handleSubmit }: Props) => {

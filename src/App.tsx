@@ -8,6 +8,8 @@ import Footer from './layout/Footer/Footer';
 import ConcertList from './components/ConcertList/ConcertList';
 import Header from './layout/Header/Header';
 
+import { FormData } from './components/Form/Form';
+
 const App = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [concerts, setConcerts] = useState<ConcertData[]>(concertData);
@@ -16,9 +18,15 @@ const App = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (
+    e: React.FormEvent<HTMLFormElement>,
+    formData: FormData
+  ) => {
     e.preventDefault();
-    console.log(123);
+  
+    console.log(formData)
+
+    toggleForm();
   };
 
   return (
