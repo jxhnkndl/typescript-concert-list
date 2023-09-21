@@ -37,7 +37,11 @@ const App = () => {
         toggleForm={toggleForm}
         handleSubmit={handleSubmit}
       />
-      <main className={styles['main-content']}>
+      <main
+        className={`${styles['main-content']} ${
+          isOpen ? styles.hide : styles.show
+        }`}
+      >
         <ConcertList concerts={concerts} />
       </main>
       <Footer />

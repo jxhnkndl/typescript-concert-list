@@ -11,3 +11,12 @@
   padding: 2rem 2.5rem;
   flex-grow: 1;
 }
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
