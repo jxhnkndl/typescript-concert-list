@@ -23,7 +23,7 @@ export interface ConcertData {
   image?: string;
 }
 
-export const concerts = [
+export const concertData = [
   {
     id: uuidv4(),
     date: dayjs('09/13/2023').format('ddd MMM M, YYYY'),

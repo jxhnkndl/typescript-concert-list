@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
 import Form from '../../components/Form/Form';
 import styles from './Header.module.css';
 
 interface Props {
   isOpen: boolean;
   toggleForm: () => void;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
-const Header = ({ isOpen, toggleForm }: Props) => {
+const Header = ({ isOpen, toggleForm, handleSubmit }: Props) => {
   console.log(isOpen);
   return (
     <>
@@ -33,7 +33,7 @@ const Header = ({ isOpen, toggleForm }: Props) => {
           isOpen ? styles.open : styles.closed
         }`}
       >
-        <Form />
+        <Form handleSubmit={handleSubmit} />
       </section>
     </>
   );
