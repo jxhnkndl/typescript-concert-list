@@ -1,18 +1,18 @@
 @import '../../vars.css';
 
 .header {
+  padding: 1rem;
   margin-bottom: 1rem;
-  border-bottom: var(--primary) solid 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--base-900);
 }
 
 .h1 {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
   color: var(--primary);
-  margin-bottom: .5rem;
   text-decoration: none;
 }
 
@@ -27,16 +27,15 @@
   align-items: center;
 }
 
-.icon {
-  font-size: 1.25rem;
-  margin-left: .25rem;
-  color: var(--primary);
-  display: inline;
-}
-
-.icon:hover,
-.icon:active {
-  color: var(--secondary);
+.btn {
+  height: 30px;
+  width: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

@@ -1,6 +1,5 @@
-import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
-import { TbCalendarPlus } from 'react-icons/tb';
+import styles from './Header.module.css';
 
 const Header = () => {
   return (
@@ -10,7 +9,7 @@ const Header = () => {
       </Link>
       <nav className={styles.nav}>
         <Link to="/create" className={styles.link}>
-          <TbCalendarPlus className={styles.icon} />
+          <button className={styles.btn}>+</button>
         </Link>
       </nav>
     </header>
