@@ -17,7 +17,7 @@ export interface FormData {
   support: string;
   time: string;
   price: string;
-  imageURL: string;
+  image: string;
 }
 
 const Form = ({ handleSubmit }: Props) => {
@@ -30,7 +30,7 @@ const Form = ({ handleSubmit }: Props) => {
     support: '',
     time: '',
     price: '',
-    imageURL: '',
+    image: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -139,8 +139,8 @@ const Form = ({ handleSubmit }: Props) => {
           className={styles.input}
           placeholder="Image URL"
           type="text"
-          name="imageURL"
-          value={formData.imageURL}
+          name="image"
+          value={formData.image}
           onChange={handleChange}
         />
       </div>

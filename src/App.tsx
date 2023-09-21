@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import styles from './App.module.css';
 
 import { ConcertData } from './data';
@@ -23,8 +24,8 @@ const App = () => {
     formData: FormData
   ) => {
     e.preventDefault();
-  
-    console.log(formData)
+
+    setConcerts([...concerts, { id: uuidv4(), ...formData }]);
 
     toggleForm();
   };
