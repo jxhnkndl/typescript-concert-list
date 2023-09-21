@@ -10,17 +10,27 @@
 }
 
 .h1 {
+  position: relative;
   font-size: 1.75rem;
   text-transform: uppercase;
-  color: var(--primary);
   text-decoration: none;
+  transition: color 200ms ease-in-out;
+  z-index: 200;
+}
+
+.h1-open {
+  color: var(--base-900);
+}
+
+.h1-closed {
+  color: var(--secondary);
 }
 
 .h1:visited {
   text-decoration: none;
 }
 
-.link {
+.nav {
   color: var(--base-100);
   text-decoration: none;
   display: flex;
@@ -49,7 +59,7 @@
 
 .rotate {
   rotate: 45deg;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .form-container {
@@ -61,6 +71,8 @@
   right: 0;
   left: 0;
   transition: all ease-in-out 200ms;
+  display: grid;
+  place-items: center;
 }
 
 .closed {
@@ -69,14 +81,11 @@
 
 .open {
   transform: translateY(0) translateX(0);
+  overflow-y: hidden;
 }
 
 @media screen and (min-width: 768px) {
   .h1 {
     font-size: 3rem;
-  }
-
-  .icon {
-    font-size: 2.5rem;
   }
 }

@@ -8,25 +8,23 @@ interface Props {
 }
 
 const Header = ({ isOpen, toggleForm }: Props) => {
-  console.log(isOpen)
+  console.log(isOpen);
   return (
     <>
       <header className={styles.header}>
-        <Link to="/" className={styles.link}>
-          <h1 className={styles.h1}>RVA Noise</h1>
-        </Link>
+        <h1
+          className={`${styles.h1} ${
+            isOpen ? styles['h1-open'] : styles['h1-closed']
+          }`}
+        >
+          RVA Noise
+        </h1>
         <nav className={styles.nav}>
-          <Link
-            to="/create"
-            className={styles.link}
-            onClick={toggleForm}
-          >
-            <button className={styles.btn}>
-              <span className={`${styles.plus} ${isOpen ? styles.rotate : ''}`}>
-                +
-              </span>
-            </button>
-          </Link>
+          <button className={styles.btn} onClick={toggleForm}>
+            <span className={`${styles.plus} ${isOpen ? styles.rotate : ''}`}>
+              +
+            </span>
+          </button>
         </nav>
       </header>
 
