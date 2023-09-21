@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import styles from './App.module.css';
-import { Outlet } from 'react-router-dom';
+import { concerts } from './data';
 
 import Footer from './layout/Footer/Footer';
+import ConcertList from './components/ConcertList/ConcertList';
 import Header from './layout/Header/Header';
-import { useState } from 'react';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const App = () => {
     <div className={styles.wrapper}>
       <Header isOpen={isOpen} toggleForm={toggleForm} />
       <main className={styles['main-content']}>
-        <Outlet />
+        <ConcertList concerts={concerts} />
       </main>
       <Footer />
     </div>
