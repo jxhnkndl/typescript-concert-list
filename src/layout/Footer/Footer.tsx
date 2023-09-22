@@ -1,11 +1,17 @@
 import styles from './Footer.module.css';
 
-const Footer = () => {
-  return (
-    <footer className={styles.footer}>
-      <h2>FOOTER</h2>
-    </footer>
-  )
+interface Props {
+  isOpen: boolean;
 }
 
-export default Footer
+const Footer = ({ isOpen }: Props) => {
+  return (
+    <footer className={styles.footer}>
+      <p className={`${styles.text} ${isOpen ? styles.show : styles.hide}`}>
+        Thank you for supporting live music!
+      </p>
+    </footer>
+  );
+};
+
+export default Footer;

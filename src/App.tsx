@@ -44,7 +44,7 @@ const App = () => {
       >
         <ConcertList concerts={concerts} />
       </main>
-      <Footer />
+      <Footer isOpen={isOpen} />
     </div>
   );
 };

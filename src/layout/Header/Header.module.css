@@ -1,12 +1,13 @@
 @import '../../vars.css';
 
 .header {
-  padding: 1rem;
+  padding: 2rem;
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--base-900);
+  border-bottom: 4px solid var(--secondary);
 }
 
 .h1 {
@@ -64,7 +65,7 @@
 
 .form-container {
   background-color: var(--secondary);
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
   position: absolute;
   top: 0;
@@ -73,6 +74,9 @@
   transition: all ease-in-out 200ms;
   display: grid;
   place-items: center;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  overflow: hidden;
 }
 
 .closed {
@@ -87,5 +91,14 @@
 @media screen and (min-width: 768px) {
   .h1 {
     font-size: 3rem;
+  }
+
+  .btn {
+    height: 40px;
+    width: 40px;
+  }
+
+  .plus {
+    font-size: 2rem;
   }
 }

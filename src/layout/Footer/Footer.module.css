@@ -1,3 +1,19 @@
 .footer {
-  margin-top: 1rem;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 1rem;
+  transition: opacity ease-in-out 400ms;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
 }
